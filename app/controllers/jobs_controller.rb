@@ -29,4 +29,18 @@ class JobsController < ApplicationController
   def edit
     @job = Job.find_by(id: params[:id])
   end
+
+  def update
+    @job = Job.find_by(id: params[:id])
+    result = @job.update({
+      title: params[:job][:title],
+      company: params[:job][:company],
+      description: params[:job][:description],
+      })
+    if result
+      redirect_to job_path(@job.id)
+    else
+      render :edit
+    end
+  end
 end
