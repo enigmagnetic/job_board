@@ -1,3 +1,8 @@
 <h3>Jobs</h3>
 
-<p>Jobs coming soon!</p>
+<% @jobs.each do |job| %>
+  <div class="job">
+    <strong><%= job.title %></strong>
+    <%= job.description %>
+  </div>
+<% end %>
