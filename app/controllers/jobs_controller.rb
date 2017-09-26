@@ -48,7 +48,7 @@ class JobsController < ApplicationController
     job = Job.find_by(id: params[:id])
     if job.destroy
       redirect_to jobs_path
-    else
+    else  
     end
   end
 end
