@@ -4,3 +4,5 @@
 <p><%= @job.description %></p>
 
 <%= link_to "Edit Job", edit_job_path(@job.id) %>
+<br>
+<%= link_to "Delete Job", delete_job_path(@job.id), method: :delete %>
